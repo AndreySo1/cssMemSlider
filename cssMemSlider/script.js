@@ -10,6 +10,38 @@ let imgText = images[0].getAttribute('alt');
 let text = document.querySelector('.slider-text');
 let around = document.querySelectorAll('.around');
 
+/* ------------------------- */
+
+let memImg=document.querySelector('.test-mem');
+let memBtn=document.querySelector('.btn-mem');
+let urlImg="https://meme-api.herokuapp.com/gimme";
+
+async function loadMem(e){
+   let response = await fetch(urlImg, { method:'GET',});
+
+   let responseResult = await response.json();
+
+   if(response.ok){
+      getMem(responseResult);
+   } else {
+      memImg.innerHTML = responseResult.message;
+   }
+}
+
+function getMem(data){
+   console.log(data);
+
+   let imgSrc = data.url;
+   let text = data.title;
+
+   let tpl = `
+   <img class="img-mem" src="${imgSrc}" alt="${text}">
+   `;
+
+   memImg.innerHTML = tpl;
+}
+
+/* ---------------------------- */
 
 function getImgText(n){
    if(imgText != 0){

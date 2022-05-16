@@ -8,48 +8,81 @@
    <title>cssMemSlider</title>
 </head>
 <body>
-   <div class="container">
-      <div class="slider">
-         <div class="slider-img">
-            <img src="./images/one.jpeg" alt="image0">
-            <img src="./images/two.jpeg" alt="image1">
-            <img src="./images/three.jpeg" alt="">
-            <img src="./images/four.jpeg" alt="image3">
+   <div class="slider-container" id="slider-container">
+      <div class="head"><h1>cssMemSlider</h1></div>
+
+      <input id="slide1" type="radio" name="slider-container" checked>
+      <input id="slide2" type="radio" name="slider-container">
+      <input id="slide3" type="radio" name="slider-container">
+      <input id="slide4" type="radio" name="slider-container">
+
+      <div class="slides-frame" id="slides-frame">
+         <div class="overflow">
+            <div class="inner">
+   
+               <div class="slide slide_1">
+                  <div class="slide-content">
+                     <img src="./images/1.jpg" alt="text1">
+                     <div class="info info1">Info slide 1</div>
+                  </div>
+               </div>
+   
+               <div class="slide slide_2">
+                  <div class="slide-content">
+                     <img src="./images/2.jpg" alt="text1">
+                     <div class="info info2">Info slide 2</div>
+                  </div>
+               </div>
+   
+               <div class="slide slide_3">
+                  <div class="slide-content">
+                     <img src="./images/3.jpg" alt="text1">
+                     <div class="info info3">Info slide 3</div>
+                  </div>
+               </div>
+   
+               <div class="slide slide_4">
+                  <div class="slide-content">
+                     <img src="./images/4.jpg" alt="text1">
+                     <div class="info info4">Info slide 4</div>
+                  </div>
+               </div>
+            </div><!-- end-inner -->
+         </div><!-- end-overflow -->
+
+         <div class="controls-content">
+            <div class="text"></div>
+
+            <div class="bullets" id="bullets">
+               
+                  <label for="slide1"></label>
+               
+               
+                  <label for="slide2"></label>
+               
+               
+                  <label for="slide3"></label>
+               
+               
+                  <label for="slide4"></label>
+                 
+            </div><!-- end-bullets -->
          </div>
+
          
-      </div> <!-- end slider -->
+      </div><!-- end-slides-frame -->
+   
+      <!--<div class="controls">
+         <label for="slide1"></label>
+         <label for="slide2"></label>
+         <label for="slide3"></label>
+         <label for="slide4"></label>
+      </div><!-- end-controls -->
 
       
 
-      <div class="slider-control">
-         <div class="slider-text">Text</div>
+   </div><!-- end-slider-container -->
 
-         <div class="slider-toggle">
-            <div class="around">
-               <div class="toggle-dot active"></div>
-            </div>
-            <div class="around">
-               <div class="toggle-dot"></div>
-            </div>
-            <div class="around">
-               <div class="toggle-dot"></div>
-            </div>
-            <div class="around">
-               <div class="toggle-dot"></div>
-            </div>
-         </div>
-
-      </div>
-
-      <div class="slider-control next-prev">
-         <div class="btn prev">Prev</div>
-         <div class="btn next">Next</div>
-      </div>
-      
-   </div> <!-- end-container -->
-
-
-
-   <script src="./script.js"></script>
+   
 </body>
 </html>
